@@ -1,0 +1,226 @@
+body{
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.hidden {
+    display: none;
+}
+.wrapper{
+    position: relative;
+    width: 100%;
+    background: #fff;
+    padding:24px;
+}
+.wrapper h1{
+    position: relative;
+    font-weight: bold;
+    color: #333;
+}
+.wrapper h1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: burlywood;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 1px solid burlywood;
+}
+table .task{
+    text-align: left;
+}
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid burlywood;
+}
+th {
+    background-color: burlywood;
+    color: #333333;
+}
+table button{
+    color: white;
+    padding: 4px 8px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+table .edit{
+    margin: 3px 0 3px 0;
+    background-color: #4caf50;
+}
+table .delete{
+    background-color: rgb(245, 0, 0);
+}
+table .edit:hover {
+    background-color: #45a049;
+}
+table .delete:hover {
+    background-color: rgb(205, 0, 0);
+}
+input, select {
+    padding: 8px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin: 10px 5px 0 0;
+}
+.add-todo .task{
+    width: 90%;
+}
+.add-todo .priority {
+    width: 25%;
+}
+.add-todo .status {
+    width: 45%;
+}
+form .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+form .buttons button {
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 20px 5px 0 0;
+}
+.add-task {
+    background-color: #4caf50;
+}
+.log-out {
+    background-color: rgb(245, 0, 0);
+}
+.add-task:hover {
+    background-color: #45a049;
+}
+.log-out:hover {
+    background-color: rgb(205, 0, 0);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+.modal .edit-task{
+    width: 90%;
+}
+
+.modal .edit-priority{
+    width: 30%
+}
+
+.modal .edit-status{
+    width: 45%
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.save-task {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px
+}
+
+.save-task:hover {
+    background-color: #45a049;
+}
+
+@media (min-width: 640px) {
+    body{
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: burlywood;
+    }
+    .wrapper{
+        position: relative;
+        max-width: 900px;
+        width: 100%;
+        background: #fff;
+        padding: 34px;
+        margin: 0 18px 0 18px;
+        border-radius: 6px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    table .delete{
+        margin-top: 0px;
+    }
+    .add-todo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    input, select {
+        padding: 8px;
+        border: 1px solid #dddddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        margin: 10px 3px 0 3px;
+    }
+    .add-todo .task {
+        width: 55%;
+    }
+    .add-todo .priority {
+        width: 15%;
+    }
+    .add-todo .status {
+        width: 25%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper{
+        margin: 0;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/todo.css">
+    <script src="js/index.js" defer></script>
+</head>
+<body class="hidden">
+  <div class="wrapper">
+    <h1>Todo List</h1>
+  
+    <div class="table-wrap">
+      <table id="todo-list">
+        <thead>
+          <tr>
+            <th class="task">Task</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <form id="add-task">
+      <div class="add-todo">
+        <input class="task" id="task" type="text" placeholder="Enter task" required>
+        <select id="priority" class="priority" required>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <select id="status" class="status" required>
+          <option value="true">Completed</option>
+          <option value="false">Not Completed</option>
+        </select>
+      </div>
+      <div class="buttons">
+        <button type="submit" class="add-task" id="add-task">Add Task</button>
+        <button class="log-out" id="log-out">Log Out</button>
+      </div>
+    </form>
+  </div>
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit Task</h2>
+      <form id="edit-task-form">
+        <input class="edit-task" id="edit-task" type="text" placeholder="Enter task" required>
+        <select class="edit-priority" id="edit-priority" required>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <select class="edit-status" id="edit-status" required>
+          <option value="true">Completed</option>
+          <option value="false">Not Completed</option>
+        </select>
+        <button type="submit" class="save-task">Save Changes</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
