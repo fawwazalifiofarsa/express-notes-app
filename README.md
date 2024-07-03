@@ -39,7 +39,7 @@ npm install
 
 3. **Install depedencies:**
 ```
-PORT=3300
+PORT=8080
 ATLAS_URI=<your_mongodb_uri>
 ACCESS_TOKEN_SECRET=<your_access_token_secret>
 ```
@@ -50,7 +50,7 @@ npm start
 ```
 
 5.  **Access the application:**
-   Open your browser and navigate to http://localhost:3300.
+   Open your browser and navigate to http://localhost:8080.
 
 ## Usage Guide
 
@@ -60,11 +60,11 @@ To run the server, use the following command:
 ```bash
 npm start
 ```
-The server will start on the port specified in the .env file (default is 3300).
+The server will start on the port specified in the .env file (default is 8080).
 
 ### Accessing the Frontend
 
-- Navigate to http://localhost:3300 to access the To-Do application.
+- Navigate to http://localhost:8080 to access the To-Do application.
 - The frontend files are located in the views folder, with their associated CSS and JavaScript files located in the public folder.
 
 ## API Endpoints
